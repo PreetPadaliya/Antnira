@@ -1,0 +1,48 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import TopBar from './components/TopBar';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import About from './pages/About';
+import Workshop from './pages/Workshop';
+import WhyUs from './pages/WhyUs';
+import Customers from './pages/Customers';
+import CSR from './pages/CSR';
+import Contact from './pages/Contact';
+
+function ScrollToTopOnNav() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTopOnNav />
+      <TopBar />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/workshop" element={<Workshop />} />
+          <Route path="/why-us" element={<WhyUs />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/csr" element={<CSR />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+      <WhatsAppWidget />
+      <ScrollToTop />
+    </Router>
+  );
+}
+
+export default App;
