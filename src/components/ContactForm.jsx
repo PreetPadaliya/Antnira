@@ -24,10 +24,6 @@ export default function ContactForm() {
 
   return (
     <section className="contact-section" id="contact-form">
-      <div className="contact-pin" style={{ left: '10%', top: '30%' }}><MapPin /></div>
-      <div className="contact-pin" style={{ left: '25%', top: '60%' }}><MapPin /></div>
-      <div className="contact-pin" style={{ left: '35%', top: '80%' }}><MapPin /></div>
-
       <div className="container">
         <div className="contact-grid">
           <div className="contact-info reveal-left">

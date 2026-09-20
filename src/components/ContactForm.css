@@ -22,18 +22,6 @@
   pointer-events: none;
 }
 
-/* Location pins */
-.contact-pin {
-  position: absolute;
-  color: var(--text-muted);
-  opacity: 0.3;
-}
-
-.contact-pin svg {
-  width: 20px;
-  height: 20px;
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
