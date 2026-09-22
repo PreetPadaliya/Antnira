@@ -3,6 +3,7 @@ import PageBanner from '../components/PageBanner';
 import WhyChooseUs from '../components/WhyChooseUs';
 import StatsSection from '../components/StatsSection';
 import ContactForm from '../components/ContactForm';
+import qualityControlImage from '../assets/WhyUs/quality-controll.jpg';
 import { Shield, Award, Globe, Users, Leaf, Lightbulb } from 'lucide-react';
 import './Pages.css';
 
@@ -90,9 +91,7 @@ export default function WhyUs() {
               </ul>
             </div>
             <div className="page-content-image">
-              <div className="page-image-placeholder" style={{ background: 'linear-gradient(135deg, #2d5a3d 0%, #4a7c59 100%)' }}>
-                <span>Quality Control Lab</span>
-              </div>
+              <img src={qualityControlImage} alt="Quality control lab at Antnira" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           </div>
         </div>
