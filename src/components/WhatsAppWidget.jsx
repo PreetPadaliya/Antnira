@@ -1,10 +1,13 @@
 import './WhatsAppWidget.css';
 
+const whatsappNumber = '918799608484';
+const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+
 export default function WhatsAppWidget() {
   return (
     <div className="whatsapp-widget">
       <a
-        href="https://wa.me/918799608484"
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"
