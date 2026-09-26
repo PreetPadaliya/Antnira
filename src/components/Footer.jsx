@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <div className="footer-contact-row">
               <Phone size={16} />
-              <a href="tel:+918799608484">8799608484</a>
+              <a href="tel:+918799608484">+91 8799608484</a>
             </div>
             <div className="footer-contact-row">
               <Mail size={16} />
@@ -35,6 +35,7 @@ export default function Footer() {
               <Link to="/workshop">Workshops</Link>
               <Link to="/why-us">Why Us</Link>
               <Link to="/customers">Our Customers</Link>
+              <Link to="/dealership">Dealership</Link>
               <Link to="/csr">CSR</Link>
               <Link to="/contact">Contact Us</Link>
             </div>

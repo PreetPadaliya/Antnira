@@ -10,7 +10,7 @@ export default function TopBar() {
         </a>
         <span className="topbar-divider">|</span>
         <a href="tel:+918799608484" className="topbar-item">
-          <Phone /> 8799608484
+          <Phone /> +91 8799608484
         </a>
       </div>
     </div>

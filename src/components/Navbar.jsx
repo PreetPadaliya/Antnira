@@ -10,6 +10,7 @@ const navItems = [
   { label: 'Workshop', path: '/workshop' },
   { label: 'Why Us', path: '/why-us' },
   { label: 'Our Customers', path: '/customers' },
+  { label: 'Dealership', path: '/dealership' },
   { label: 'CSR', path: '/csr' },
 ];
 

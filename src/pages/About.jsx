@@ -37,18 +37,18 @@ export default function About() {
           <div className="page-content-grid reveal">
             <div className="page-content-text">
               <span className="pill-badge">About Antnira</span>
-              <h2>Building Growth Through Manufacturing Excellence</h2>
+              <h2>An Apparel Manufacturing Partner Built Around Your Requirements</h2>
               <p>
-                ANTNIRA Group is an Indian investment company dedicated to building and growing manufacturing
-                businesses across diverse industries.
+                ANTNIRA Group is an apparel manufacturing and export partner for brands, businesses, and
+                organizations that need dependable production support.
               </p>
               <p>
-                Backed by a strong dealer network and a global vision, we partner with companies that share
-                our commitment to innovation, quality, and long-term value.
+                From product development and sampling to quality checks, packaging, and shipment, we build
+                each program around the product, quantity, and finish you require.
               </p>
               <p>
-                As we expand internationally, our focus remains the same: building trusted partnerships
-                and creating sustainable growth.
+                Our focus is practical and clear: consistent workmanship, responsive communication, and
+                production that helps your business move forward with confidence.
               </p>
             </div>
             <div className="page-content-image about-image-frame">
@@ -56,9 +56,9 @@ export default function About() {
             </div>
           </div>
           <div className="about-proof reveal">
-            <div><strong>20+</strong><span>Global markets</span></div>
-            <div><strong>6</strong><span>Core business models</span></div>
-            <div><strong>9</strong><span>Export product categories</span></div>
+            <div><strong>01</strong><span>Requirement-led production</span></div>
+            <div><strong>02</strong><span>Quality checks at every stage</span></div>
+            <div><strong>03</strong><span>Export-ready support</span></div>
             <div className="about-proof-year"><strong>ANTNIRA</strong><span>Committed to Your Growth</span></div>
           </div>
         </div>

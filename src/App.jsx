@@ -12,6 +12,7 @@ import WhyUs from './pages/WhyUs';
 import Customers from './pages/Customers';
 import CSR from './pages/CSR';
 import Contact from './pages/Contact';
+import Dealership from './pages/Dealership';
 
 function ScrollToTopOnNav() {
   const { pathname } = useLocation();
@@ -36,6 +37,7 @@ function App() {
           <Route path="/customers" element={<Customers />} />
           <Route path="/csr" element={<CSR />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dealership" element={<Dealership />} />
         </Routes>
       </main>
       <Footer />

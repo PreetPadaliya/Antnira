@@ -4,7 +4,7 @@
 }
 
 .group-companies-header {
-  padding: 80px 0 50px;
+  padding: 20px 0 50px;
   background: var(--bg-white);
 }
 
@@ -154,6 +154,10 @@
 }
 
 @media (max-width: 768px) {
+  .group-slider-item {
+    height: 210px;
+  }
+
   .group-cards {
     grid-template-columns: 1fr;
   }

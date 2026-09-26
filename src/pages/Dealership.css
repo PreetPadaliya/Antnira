@@ -1,0 +1,227 @@
+.dealership-intro {
+  padding-top: 90px;
+}
+
+.dealership-intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.dealership-intro h2 {
+  max-width: 720px;
+  margin-top: 20px;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.08;
+  color: var(--text-primary);
+}
+
+.dealership-intro p {
+  margin-bottom: 28px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.dealership-benefits {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.dealership-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.dealership-benefit {
+  min-height: 250px;
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+}
+
+.dealership-benefit svg,
+.dealership-process-card svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 28px;
+  color: var(--brand-yellow);
+  stroke-width: 1.5;
+}
+
+.dealership-benefit h3,
+.dealership-process-card h3 {
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+.dealership-benefit p,
+.dealership-process-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.dealership-products {
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+
+.dealership-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dealership-product {
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+}
+
+.dealership-product-image {
+  height: 260px;
+  overflow: hidden;
+  background: var(--bg-light);
+}
+
+.dealership-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dealership-product:hover img {
+  transform: scale(1.05);
+}
+
+.dealership-product-content {
+  padding: 24px;
+}
+
+.dealership-product-content > span,
+.dealership-process-card > span {
+  color: var(--brand-yellow);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dealership-product-content h3 {
+  margin: 12px 0 10px;
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  color: var(--text-primary);
+}
+
+.dealership-product-content p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.dealership-process {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.dealership-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.dealership-process-card {
+  min-height: 260px;
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+}
+
+.dealership-process-card svg {
+  margin-bottom: 20px;
+}
+
+.dealership-process-card > span {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.dealership-cta {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.dealership-cta-inner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 44px;
+  background: var(--primary-dark);
+  color: var(--text-white);
+}
+
+.dealership-cta-inner .pill-badge {
+  margin-bottom: 18px;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--text-white);
+}
+
+.dealership-cta-inner h2 {
+  max-width: 680px;
+  color: var(--text-white);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+  .dealership-benefits-grid,
+  .dealership-products-grid,
+  .dealership-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dealership-intro-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dealership-intro {
+    padding-top: 60px;
+  }
+
+  .dealership-intro-grid,
+  .dealership-benefits-grid,
+  .dealership-products-grid,
+  .dealership-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dealership-intro-grid {
+    gap: 30px;
+  }
+
+  .dealership-benefits,
+  .dealership-products,
+  .dealership-process {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .dealership-cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .dealership-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px 24px;
+  }
+}

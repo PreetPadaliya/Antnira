@@ -7,8 +7,8 @@ import './GroupCompanies.css';
 
 const companies = [
   {
-    tag: 'Export Manufacturing',
-    title: 'Apparel Export',
+    tag: 'Manufacturing Excellence',
+    title: 'Building Global Businesses',
     image: apparelExport,
   },
   {
