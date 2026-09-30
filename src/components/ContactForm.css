@@ -1,0 +1,220 @@
+.inquire-section {
+  padding: 100px 0 110px;
+  background: #f1f2f4;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.inquire-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+/* ----------------------------------------------------
+   LEFT COLUMN: Minimalist Editorial Title (Image 1)
+   ---------------------------------------------------- */
+.inquire-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.inquire-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #2b2f38;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+.inquire-kicker-cross {
+  font-size: 1rem;
+  color: #1a1d24;
+  font-weight: 700;
+}
+
+.inquire-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  line-height: 1.18;
+}
+
+.inquire-heading-primary {
+  font-family: var(--font-body);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+  color: #11141a;
+  letter-spacing: -0.02em;
+}
+
+.inquire-heading-secondary {
+  font-family: var(--font-body);
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 300;
+  color: #3e4452;
+  letter-spacing: -0.01em;
+}
+
+/* ----------------------------------------------------
+   RIGHT COLUMN: Clean Underline Form (Image 1)
+   ---------------------------------------------------- */
+.inquire-right {
+  position: relative;
+}
+
+.inquire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.inquire-row {
+  display: grid;
+  gap: 32px;
+}
+
+.inquire-row-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.inquire-row-3 {
+  grid-template-columns: 100px 1.25fr 1fr;
+}
+
+.inquire-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inquire-field label {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #262930;
+  margin-bottom: 6px;
+}
+
+.inquire-req {
+  color: #e11d48;
+  margin-left: 2px;
+  font-weight: 700;
+}
+
+.inquire-field input,
+.inquire-field select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c2c6ce;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: #11141a;
+  border-radius: 0;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.inquire-field input::placeholder {
+  color: #9aa1ad;
+  font-size: 0.92rem;
+}
+
+.inquire-field input:focus,
+.inquire-field select:focus {
+  border-bottom-color: #11141a;
+}
+
+.inquire-field select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23262930' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 20px;
+}
+
+.inquire-field select option {
+  background: #ffffff;
+  color: #11141a;
+  padding: 8px;
+}
+
+/* Submit Button */
+.inquire-action {
+  margin-top: 14px;
+}
+
+.inquire-submit-btn {
+  width: 100%;
+  background: #1a1d24;
+  color: #ffffff;
+  border: none;
+  padding: 17px 24px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.inquire-submit-btn:hover {
+  background: #000000;
+  color: var(--brand-yellow);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.inquire-form-status {
+  padding: 14px 18px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-size: 0.92rem;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE DESIGN
+   ---------------------------------------------------- */
+@media (max-width: 991px) {
+  .inquire-section {
+    padding: 70px 0 80px;
+  }
+
+  .inquire-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .inquire-kicker {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .inquire-row-2,
+  .inquire-row-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .inquire-form {
+    gap: 20px;
+  }
+
+  .inquire-submit-btn {
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,218 @@
+.testimonials {
+  padding: var(--section-padding);
+  background: var(--bg-light-blue);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.testimonials-header {
+  margin-bottom: 48px;
+}
+
+.testimonials-header h2 {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  margin-top: 6px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.phone-frame {
+  background: #111315;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: #111315;
+  border-radius: 0 0 14px 14px;
+  z-index: 3;
+}
+
+.phone-screen {
+  background: #e5ddd5;
+  border-radius: 30px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  position: relative;
+}
+
+.chat-container {
+  padding: 60px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.chat-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0f1c24;
+  color: white;
+  padding: 34px 14px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--brand-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.chat-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.chat-bubble {
+  max-width: 88%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble.sent {
+  background: #dcf8c6;
+  align-self: flex-end;
+  border-top-right-radius: 2px;
+}
+
+.chat-bubble.received {
+  background: white;
+  align-self: flex-start;
+  border-top-left-radius: 2px;
+}
+
+.chat-time {
+  font-size: 0.6rem;
+  color: #888;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.phone-home-indicator {
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 10px auto 2px;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+  background: var(--bg-white);
+  padding: clamp(36px, 5vw, 54px);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.testimonial-quote-icon {
+  color: var(--brand-yellow);
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin-bottom: 36px;
+  min-height: 130px;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 24px;
+}
+
+.testimonial-counter strong {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand-yellow);
+}
+
+.testimonial-counter span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.testimonial-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.testimonial-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-medium);
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.testimonial-nav-btn:hover {
+  background: var(--primary-dark);
+  color: var(--brand-yellow);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .phone-mockup {
+    margin: 0 auto;
+  }
+}
