@@ -47,8 +47,8 @@ export default function Workshops() {
       <div className="container">
         <div className="workshops-header reveal">
           <div className="workshops-header-left">
-            <span className="pill-badge">Manufacturing Excellence</span>
-            <h2>Apparel Built for Global Markets</h2>
+            <span className="pill-badge">Global Manufacturing</span>
+            <h2>Manufacturing for Global Markets</h2>
           </div>
           <Link to="/workshop" className="explore-link">
             Explore All Facilities <ArrowUpRight size={18} />
@@ -80,12 +80,6 @@ export default function Workshops() {
                     src={image}
                     alt={`${workshopLabels[index % workshopLabels.length]} manufacturing`}
                   />
-                  <div className="workshop-slide-scrim"></div>
-                  <div className="workshop-slide-info">
-                    <span className="workshop-slide-pill">
-                      {workshopLabels[index % workshopLabels.length]}
-                    </span>
-                  </div>
                 </div>
               </SwiperSlide>
             ))}

@@ -1,7 +1,7 @@
 .workshops {
-  padding: var(--section-padding);
+  padding: 18px 0 30px;
   background: var(--bg-white);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: none;
   overflow: hidden;
 }
 
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 48px;
+  margin-bottom: 22px;
   gap: 24px;
 }
 
@@ -49,35 +49,6 @@
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.workshop-slide-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.75) 100%);
-  opacity: 0.8;
-  transition: opacity var(--transition-fast);
-}
-
-.workshop-slide-info {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  right: 18px;
-  z-index: 2;
-}
-
-.workshop-slide-pill {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
-  color: var(--text-primary);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-fast);
-}
-
 .workshop-slide:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
@@ -86,11 +57,6 @@
 
 .workshop-slide:hover .workshop-slide-bg {
   transform: scale(1.08);
-}
-
-.workshop-slide:hover .workshop-slide-pill {
-  background: var(--brand-yellow);
-  color: var(--primary-dark);
 }
 
 @media (max-width: 768px) {

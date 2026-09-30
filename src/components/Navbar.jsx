@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, X, Phone, Mail, MapPin } from 'lucide-react';
+import { collectionCategories, getCollectionProductPath } from '../data/collectionCatalog';
 import logo from '../assets/logo-white.png';
 import './Navbar.css';
 
@@ -13,31 +14,14 @@ const navItems = [
   {
     type: 'mega',
     label: 'Collection',
-    path: '/#collection',
-    columns: [
-      {
-        heading: 'Healthcare Uniforms',
-        items: [
-          { label: 'Medical Scrubs', path: '/#collection' },
-          { label: 'Doctor Uniforms', path: '/#collection' },
-          { label: 'Nurse Uniforms', path: '/#collection' },
-          { label: 'Lab Coats & Laboratory Uniforms', path: '/#collection' },
-          { label: 'Ward Boy & Hospital Staff Uniforms', path: '/#collection' },
-          { label: 'Patient Wear', path: '/#collection' },
-          { label: 'Hospital Accessories', path: '/#collection' },
-        ],
-      },
-      {
-        heading: 'Custom T-Shirts',
-        items: [
-          { label: 'Custom Round-Neck T-Shirts', path: '/#collection' },
-          { label: 'Custom Polo T-Shirts', path: '/#collection' },
-          { label: 'Corporate T-Shirts', path: '/#collection' },
-          { label: 'Promotional T-Shirts', path: '/#collection' },
-          { label: 'Event & Team T-Shirts', path: '/#collection' },
-        ],
-      },
-    ],
+    path: '/collection',
+    columns: collectionCategories.slice(0, 2).map((category) => ({
+      heading: category.title,
+      items: category.products.map((product) => ({
+        label: product.title,
+        path: getCollectionProductPath(product.slug),
+      })),
+    })),
   },
   {
     type: 'dropdown',
@@ -151,7 +135,7 @@ export default function Navbar() {
       return item.items.some((sub) => location.pathname === sub.path);
     }
     if (item.type === 'mega') {
-      return location.hash === '#collection';
+      return location.pathname.startsWith('/collection') || (location.pathname === '/' && location.hash === '#collection');
     }
     return false;
   };

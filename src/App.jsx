@@ -18,6 +18,8 @@ import TechnicalDetails from './pages/TechnicalDetails';
 import PackagingDetails from './pages/PackagingDetails';
 import Blog from './pages/Blog';
 import Certificate from './pages/Certificate';
+import Collection from './pages/Collection';
+import CollectionProduct from './pages/CollectionProduct';
 import { Analytics } from '@vercel/analytics/react';
 
 function ScrollToTopOnNav() {
@@ -46,6 +48,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/:slug" element={<CollectionProduct />} />
           <Route path="/about" element={<About />} />
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/why-us" element={<WhyUs />} />

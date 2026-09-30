@@ -27,7 +27,7 @@ const categories = [
     description: 'Medical Scrubs, Doctor Coats, Patient Uniforms, Medical Aprons, and Hospital Workwear engineered for durability and comfort.',
     items: ['Medical Scrubs', 'Doctor Coats', 'Patient Uniforms', 'Medical Aprons', 'Hospital Workwear'],
     image: productImage1,
-    link: '/workshop',
+    link: '/collection#healthcare-uniforms',
   },
   {
     title: 'Corporate & Workwear',
@@ -35,7 +35,7 @@ const categories = [
     description: 'Corporate T-Shirts, Polo Shirts, Workwear, Security Uniforms, and Institutional Uniforms tailored to brand specifications.',
     items: ['Corporate T-Shirts', 'Polo Shirts', 'Workwear', 'Security Uniforms', 'Institutional Uniforms'],
     image: productImage2,
-    link: '/workshop',
+    link: '/collection#corporate-workwear',
   },
   {
     title: 'Casual Apparel',
@@ -43,7 +43,7 @@ const categories = [
     description: 'T-Shirts, Hoodies, Sweatshirts, Joggers, and Kidswear crafted with premium knits, modern cuts, and lasting finishes.',
     items: ['T-Shirts', 'Hoodies', 'Sweatshirts', 'Joggers', 'Kidswear'],
     image: productImage3,
-    link: '/workshop',
+    link: '/collection#casual-private-label',
   },
   {
     title: 'Custom Apparel',
@@ -51,7 +51,7 @@ const categories = [
     description: 'Private Label, Custom Designs, Custom Fabric development, Custom Colors, and Custom Branding suited to global markets.',
     items: ['Private Label', 'Custom Designs', 'Custom Fabric', 'Custom Colors', 'Custom Branding'],
     image: productImage4,
-    link: '/dealership',
+    link: '/collection#custom-t-shirts',
   },
 ];
 
@@ -94,7 +94,7 @@ export default function ProductShowcase() {
               ensuring unmatched durability, comfort, and performance.
             </p>
 
-            <Link to="/workshop" className="product-circle-cta" aria-label="Explore Full Range">
+            <Link to="/collection" className="product-circle-cta" aria-label="Explore Full Range">
               <div className="product-circle-spin-ring"></div>
               <ArrowUpRight size={20} className="product-circle-icon" />
               <span className="product-circle-label">Explore All</span>

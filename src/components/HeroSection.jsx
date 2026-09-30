@@ -138,7 +138,7 @@ export default function HeroSection() {
                     </span>
                   </Link>
 
-                  <Link to="/workshop" className="btn-circle hero-circle-btn">
+                  <Link to="/collection" className="btn-circle hero-circle-btn">
                     <span>View Products</span>
                     <span className="btn-circle-icon">
                       <ArrowUpRight size={18} />
