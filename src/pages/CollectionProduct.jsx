@@ -4,6 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import PageBanner from '../components/PageBanner';
 import ContactForm from '../components/ContactForm';
 import { collectionProducts, getCollectionProductPath } from '../data/collectionCatalog';
+import { collectionProductImages } from '../data/collectionImages';
 import './CollectionProduct.css';
 
 const productOptions = {
@@ -58,7 +59,7 @@ export default function CollectionProduct() {
 
           <div className="collection-product-layout reveal">
             <div className="collection-product-photo">
-              <img src={product.image || product.categoryImage} alt={product.imageAlt || product.categoryImageAlt} />
+              <img src={collectionProductImages[product.slug] || product.image || product.categoryImage} alt={product.imageAlt || product.categoryImageAlt} />
               <span>{product.categoryTitle}</span>
             </div>
             <div className="collection-product-copy">

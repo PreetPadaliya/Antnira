@@ -3,28 +3,9 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import PageBanner from '../components/PageBanner';
 import ContactForm from '../components/ContactForm';
-import { collectionCategories, getCollectionProductPath } from '../data/collectionCatalog';
+import { getCollectionProductPath } from '../data/collectionCatalog';
+import { collectionsWithImages, productImages } from '../data/collectionImages';
 import './Collection.css';
-
-const productImages = Object.entries(
-  import.meta.glob('../assets/imagesNew/*.{png,jpg,jpeg}', {
-    eager: true,
-    query: '?url',
-    import: 'default',
-  })
-)
-  .sort(([first], [second]) => first.localeCompare(second, undefined, { numeric: true }))
-  .map(([, image]) => image);
-
-let productImageIndex = 0;
-const collectionsWithImages = collectionCategories.map((collection) => ({
-  ...collection,
-  products: collection.products.map((product) => {
-    const image = productImages[productImageIndex % productImages.length];
-    productImageIndex += 1;
-    return { ...product, image };
-  }),
-}));
 
 export default function Collection() {
   useScrollReveal();
