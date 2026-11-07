@@ -2,6 +2,17 @@ import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 import './Testimonials.css';
 
+const customerReviewImages = Object.entries(
+  import.meta.glob('../assets/Customer Review/*.{png,jpg,jpeg}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }),
+)
+  .sort(([first], [second]) => first.localeCompare(second))
+  .slice(0, 4)
+  .map(([, image]) => image);
+
 const testimonials = [
   {
     text: "Trust? Absolutely, Antnira Group is my go-to for anything I need because I know I can rely on them & Their consistency in delivering top-notch products and standing by their promises is why I trust them.",
@@ -58,20 +69,11 @@ export default function Testimonials() {
             <div className="phone-frame">
               <div className="phone-notch" />
               <div className="phone-screen">
-                <div className="chat-header">
-                  <div className="chat-avatar">AN</div>
-                  <div className="chat-name">Antnira Group</div>
-                </div>
-                <div className="chat-container">
-                  {testimonial.chatMessages.map((msg, index) => (
-                    <div key={`${current}-${index}`} className={`chat-bubble ${msg.type}`}>
-                      {msg.text}
-                      <div className="chat-time">
-                        {msg.type === 'sent' ? '11:18 AM ✓✓' : '11:12 AM'}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <img
+                  src={customerReviewImages[current]}
+                  alt={`Customer review ${current + 1}`}
+                  className="customer-review-photo"
+                />
               </div>
               <div className="phone-home-indicator" />
             </div>

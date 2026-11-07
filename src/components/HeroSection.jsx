@@ -1,15 +1,15 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
-import { ArrowUpRight, ArrowLeft, ArrowRight, ShieldCheck, Factory, CheckCircle2, Globe } from 'lucide-react';
+import { Autoplay, EffectFade } from 'swiper/modules';
+import { ArrowUpRight, ShieldCheck, Factory, CheckCircle2, Globe } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 
-import heroBuilding from '../assets/heroBuilding.png';
-import facilityImage from '../assets/Apparel Built for Global Markets/20250226_103641.jpg';
-import workshopImage from '../assets/Apparel Built for Global Markets/20250226_103957.jpg';
+import apparelMadeImage from '../assets/HomePage/ApparelMade.png';
+import uniformImage from '../assets/HomePage/Uniform.png';
+import customImage from '../assets/HomePage/Custom.png';
 
 import './HeroSection.css';
 
@@ -20,7 +20,7 @@ const slides = [
     titleLine2: 'Around Your',
     titleLine3: 'Requirements.',
     description: 'We manufacture custom apparel, uniforms and textile products for brands, businesses, healthcare organizations and institutions.',
-    image: heroBuilding,
+    image: apparelMadeImage,
     badge: 'Antnira Manufacturing Unit • Surat & Lindiad, Gujarat',
     trustLine: [
       { icon: ShieldCheck, text: 'Custom Development' },
@@ -35,7 +35,7 @@ const slides = [
     titleLine2: '& Workwear',
     titleLine3: 'Solutions.',
     description: 'From fabric selection and product development to production, quality inspection and final delivery, we manage the process around your exact requirements.',
-    image: facilityImage,
+    image: uniformImage,
     badge: 'Precision Stitching • Hospital Scrubs & Institutional Wear',
     trustLine: [
       { icon: ShieldCheck, text: 'Approved Specs' },
@@ -50,7 +50,7 @@ const slides = [
     titleLine2: '& Private Label',
     titleLine3: 'Programs.',
     description: 'Flexible apparel manufacturing, OEM & ODM capabilities, custom branding, and scalable production built to support international brands.',
-    image: workshopImage,
+    image: customImage,
     badge: 'Global Export Partner • Serving 20+ International Markets',
     trustLine: [
       { icon: ShieldCheck, text: 'Flexible MOQs' },
@@ -65,25 +65,17 @@ export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
 
-  const handlePrev = () => {
-    if (swiperRef.current) swiperRef.current.slidePrev();
-  };
-
-  const handleNext = () => {
-    if (swiperRef.current) swiperRef.current.slideNext();
-  };
-
   return (
     <section className="hero-slider-section">
       <Swiper
-        modules={[Autoplay, EffectFade, Navigation]}
+        modules={[Autoplay, EffectFade]}
         effect="fade"
         speed={1000}
         loop={true}
         autoplay={{
-          delay: 6000,
+          delay: 3000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -94,7 +86,7 @@ export default function HeroSection() {
         className="hero-swiper"
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className={`hero-slide-${index + 1}`}>
             <div className="hero-slide-bg">
               <img src={slide.image} alt={slide.titleLine1} className="hero-slide-img" />
               <div className="hero-slide-overlay" />
@@ -169,22 +161,6 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <div className="hero-arrow-box">
-            <button
-              className="hero-nav-arrow"
-              onClick={handlePrev}
-              aria-label="Previous slide"
-            >
-              <ArrowLeft size={20} />
-            </button>
-            <button
-              className="hero-nav-arrow"
-              onClick={handleNext}
-              aria-label="Next slide"
-            >
-              <ArrowRight size={20} />
-            </button>
-          </div>
         </div>
       </div>
     </section>

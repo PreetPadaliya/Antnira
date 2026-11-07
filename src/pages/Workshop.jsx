@@ -70,6 +70,24 @@ export default function Workshop() {
             <h2>Photo Gallery</h2>
             <p>Explore the people, processes, and production details behind Antnira's global apparel manufacturing.</p>
           </div>
+          <div className="workshop-gallery-feature reveal">
+            <div className="workshop-gallery-feature-copy">
+              <span className="pill-badge">Antnira in Motion</span>
+              <h3>Inside our apparel manufacturing journey.</h3>
+              <p>
+                See the people, production floor, and attention to detail behind the apparel we make for
+                global partners.
+              </p>
+            </div>
+            <div className="workshop-video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/QjvJxuFinRU"
+                title="Antnira apparel manufacturing"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
           <div className="workshop-gallery-grid">
             {galleryImages.map((image, index) => (
               <div className={`workshop-gallery-item reveal delay-${(index % 6) + 1}`} key={image}>

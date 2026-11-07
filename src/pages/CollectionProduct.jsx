@@ -37,7 +37,7 @@ const productOptions = {
 export default function CollectionProduct() {
   const { slug } = useParams();
   const product = collectionProducts.find((item) => item.slug === slug);
-  useScrollReveal();
+  useScrollReveal(slug);
 
   if (!product) {
     return <Navigate to="/collection" replace />;
@@ -64,25 +64,38 @@ export default function CollectionProduct() {
             </div>
             <div className="collection-product-copy">
               <span className="collection-product-eyebrow">Made to your specification</span>
-              <h2>{product.title}, developed around your needs.</h2>
-              <p>{product.description}</p>
-              <p>
-                Antnira supports product development, sampling, production, quality checks, and export
-                fulfillment. Share your brief and we can discuss suitable materials, quantities, and
-                finishing for your order.
-              </p>
+              <h2>{product.detailTitle || `${product.title}, developed around your needs.`}</h2>
+              {(product.detailIntro || [product.description]).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
 
-              <div className="collection-product-options">
-                <h3>Options to discuss</h3>
-                <ul>
-                  {productOptions[product.categoryId].map((option) => (
-                    <li key={option}>
-                      <Check size={16} aria-hidden="true" />
-                      <span>{option}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {product.detailSections ? (
+                product.detailSections.map((section) => (
+                  <div className="collection-product-options" key={section.title}>
+                    <h3>{section.title}</h3>
+                    <ul>
+                      {section.items.map((item) => (
+                        <li key={item}>
+                          <Check size={16} aria-hidden="true" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              ) : (
+                <div className="collection-product-options">
+                  <h3>Options to discuss</h3>
+                  <ul>
+                    {productOptions[product.categoryId].map((option) => (
+                      <li key={option}>
+                        <Check size={16} aria-hidden="true" />
+                        <span>{option}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <Link to="/contact" className="collection-product-cta">
                 Discuss {product.title} <ArrowUpRight size={18} />

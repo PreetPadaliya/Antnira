@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import aboutImage from '../assets/Apparel Built for Global Markets/20250226_103641.jpg';
+import aboutImage from '../assets/HomePage/Factory images (8).png';
 import './AboutPreview.css';
 
 const proofPoints = [

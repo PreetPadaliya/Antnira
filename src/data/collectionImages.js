@@ -2,7 +2,6 @@ import { collectionCategories } from './collectionCatalog';
 import doctorUniformCardImage from '../assets/Products/product-1.jpg';
 import nurseUniformCardImage from '../assets/Products/product-2.jpg';
 import patientWearCardImage from '../assets/imagesNew/hospital_staff_uniform_1790789243719.jpg';
-import labCoatCardImage from '../assets/imagesNew/lab_coat_1790789230564.jpg';
 import roundNeckTshirtCardImage from '../assets/Products/product-9.jpg';
 import poloTshirtCardImage from '../assets/Products/product-3.jpg';
 import corporateTshirtCardImage from '../assets/Products/product-8.jpg';
@@ -19,7 +18,6 @@ const imageOverrides = {
   'doctor-uniforms': doctorUniformCardImage,
   'nurse-uniforms': nurseUniformCardImage,
   'patient-wear': patientWearCardImage,
-  'lab-coats-laboratory-uniforms': labCoatCardImage,
   'custom-round-neck-t-shirts': roundNeckTshirtCardImage,
   'custom-polo-t-shirts': poloTshirtCardImage,
   'corporate-t-shirts': corporateTshirtCardImage,

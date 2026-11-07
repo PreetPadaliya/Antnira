@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import qualityImage from '../assets/WhyUs/quality-controll.jpg';
-import processImage from '../assets/Apparel Built for Global Markets/20250226_103957.jpg';
+import processImage from '../assets/HomePage/Packaging photo.png';
 import capabilityImage from '../assets/Apparel Built for Global Markets/23.png';
 import './ProcessAndCapabilities.css';
 

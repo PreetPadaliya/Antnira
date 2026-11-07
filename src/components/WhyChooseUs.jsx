@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import diverseImg from '../assets/WhyUs/diverse-expertise.jpg';
 import innovationImg from '../assets/WhyUs/innovation-driven.png';
@@ -121,12 +121,6 @@ export default function WhyChooseUs() {
                 <h3 className="why-card-title">{reason.title}</h3>
                 <p className="why-card-desc">{reason.desc}</p>
 
-                <div className="why-card-footer">
-                  <span className="why-card-more">
-                    <span>Learn More</span>
-                    <ArrowUpRight size={15} />
-                  </span>
-                </div>
               </div>
             </article>
           ))}
