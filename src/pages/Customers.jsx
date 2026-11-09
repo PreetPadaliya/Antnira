@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 import './Pages.css';
 
 const reviewPhotos = Object.entries(
-  import.meta.glob('../assets/Photo Gallery/*.{png,jpg,jpeg}', {
+  import.meta.glob('../assets/Customer Review/*.{png,jpg,jpeg}', {
     eager: true,
     query: '?url',
     import: 'default',

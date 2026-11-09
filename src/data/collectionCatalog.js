@@ -1,5 +1,5 @@
 import healthcareImage from '../assets/imagesNew/medical_scrubs_1790789190061.jpg';
-import tshirtImage from '../assets/imagesNew/custom_round_neck_tshirt_1790789294109.jpg';
+import tshirtImage from '../assets/Products/product-18.jpg';
 import corporateImage from '../assets/imagesNew/corporate_wear_1790789389721.jpg';
 import casualImage from '../assets/Products/product-7.jpg';
 import medicalScrubsImage from '../assets/imagesNew/medical_scrubs_1790789190061.jpg';
@@ -11,7 +11,9 @@ import customRoundNeckImage from '../assets/imagesNew/custom_round_neck_tshirt_1
 import customPoloImage from '../assets/imagesNew/custom_polo_tshirt_1790789307515.jpg';
 import corporateTshirtImage from '../assets/imagesNew/corporate_tshirt_1790789321404.jpg';
 import promotionalTshirtImage from '../assets/imagesNew/promotional_tshirt_1790789334918.jpg';
-import eventTeamImage from '../assets/imagesNew/event_team_tshirt_1790789352065.jpg';
+import eventTeamImage from '../assets/Products/product-15.jpg';
+import workwearImage from '../assets/Products/product-16.jpg';
+import hoodiesSweatshirtsImage from '../assets/Products/product-17.jpg';
 import corporateWearImage from '../assets/imagesNew/corporate_wear_1790789389721.jpg';
 
 const productImageMap = {
@@ -27,12 +29,12 @@ const productImageMap = {
   'promotional-t-shirts': promotionalTshirtImage,
   'event-team-t-shirts': eventTeamImage,
   'corporate-wear': corporateWearImage,
-  workwear: corporateWearImage,
+  workwear: workwearImage,
   'security-uniforms': hospitalStaffImage,
   'institutional-uniforms': corporateWearImage,
   'hospitality-uniforms': hospitalAccessoriesImage,
   't-shirts': customRoundNeckImage,
-  'hoodies-sweatshirts': customPoloImage,
+  'hoodies-sweatshirts': hoodiesSweatshirtsImage,
   joggers: eventTeamImage,
   kidswear: promotionalTshirtImage,
   'private-label-collections': eventTeamImage,

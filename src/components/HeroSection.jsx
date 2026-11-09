@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
@@ -64,6 +64,29 @@ const slides = [
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const keepAutoplayRunning = () => {
+      const swiper = swiperRef.current;
+      if (document.visibilityState !== 'visible' || !swiper || swiper.destroyed) {
+        return;
+      }
+
+      if (!swiper.autoplay.running) {
+        swiper.autoplay.start();
+      }
+    };
+
+    const autoplayWatchdog = window.setInterval(keepAutoplayRunning, 1000);
+    document.addEventListener('visibilitychange', keepAutoplayRunning);
+    window.addEventListener('focus', keepAutoplayRunning);
+
+    return () => {
+      window.clearInterval(autoplayWatchdog);
+      document.removeEventListener('visibilitychange', keepAutoplayRunning);
+      window.removeEventListener('focus', keepAutoplayRunning);
+    };
+  }, []);
 
   return (
     <section className="hero-slider-section">

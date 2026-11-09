@@ -6,8 +6,10 @@ import roundNeckTshirtCardImage from '../assets/Products/product-9.jpg';
 import poloTshirtCardImage from '../assets/Products/product-3.jpg';
 import corporateTshirtCardImage from '../assets/Products/product-8.jpg';
 import promotionalTshirtCardImage from '../assets/imagesNew/promotional_tshirt_1790789334918.jpg';
-import eventTeamTshirtCardImage from '../assets/imagesNew/event_team_tshirt_1790789352065.jpg';
+import eventTeamTshirtCardImage from '../assets/Products/product-15.jpg';
 import securityUniformCardImage from '../assets/Products/product-5.jpg';
+import workwearCardImage from '../assets/Products/product-16.jpg';
+import hoodiesSweatshirtsCardImage from '../assets/Products/product-17.jpg';
 import corporateWearCardImage from '../assets/imagesNew/corporate_wear_1790789389721.jpg';
 import joggersCardImage from '../assets/Products/product-10.jpg';
 import kidswearCardImage from '../assets/Products/product-12.jpg';
@@ -25,8 +27,8 @@ const imageOverrides = {
   'event-team-t-shirts': eventTeamTshirtCardImage,
   'security-uniforms': securityUniformCardImage,
   'corporate-wear': corporateWearCardImage,
-  workwear: patientWearCardImage,
-  'hoodies-sweatshirts': corporateTshirtCardImage,
+  workwear: workwearCardImage,
+  'hoodies-sweatshirts': hoodiesSweatshirtsCardImage,
   joggers: joggersCardImage,
   kidswear: kidswearCardImage,
   'private-label-collections': privateLabelCardImage,

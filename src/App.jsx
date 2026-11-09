@@ -38,7 +38,6 @@ function ScrollToTopOnNav() {
   }, [pathname, hash]);
   return null;
 }
-
 function App() {
   return (
     <Router>
